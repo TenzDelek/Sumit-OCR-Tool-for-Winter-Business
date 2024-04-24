@@ -1,5 +1,5 @@
 "use client";
-import { FaRegCopy } from "react-icons/fa";
+import { FaRegCopy, FaRegCopyright } from "react-icons/fa";
 import { VscCheck } from "react-icons/vsc";
 import converter from "@/utils/Convert";
 import { useEffect, useRef, useState } from "react";
@@ -174,6 +174,13 @@ export default function Home() {
             ))
           )}
         </div>
+      </div>
+      <div className=" md:text-sm text-xs text-center">
+        <div className="flex items-center justify-center gap-2 ">
+        <FaRegCopyright />
+        <p className=" font-medium">2024 Tenzin Delek. All Right Reserved</p>
+        </div>
+        <p className="text-[#999999]">Made with Love and Tsampa(50% ButterTea, No Chura)</p>
       </div>
     </div>
   );

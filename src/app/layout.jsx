@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "OCR generator",
+  title: "SumIT:OCR for Winter Business",
   description: "Image to Text generator",
 };
 
