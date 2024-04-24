@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## SumIT
+An OCR based tool for Tibetan Winter Business Sellers
 
 ## Getting Started
 
-First, run the development server:
+Steps to setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
+Steps to use:
+1. Click a Photo from your noteBook (make sure the Amounts are clear)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. import the photo by either drag or click
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. the amount will show at down
+# Inspiration
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This tool is designed specifically for `Tibetan` Winter Business Sellers, aiming to alleviate the cumbersome process of manual calculations from their books. The inspiration for this tool struck me when I witnessed my father spending countless hours grappling with the complexities of calculating `Bhulon and Mar Tsa`, often under considerable stress. Seeing his struggle sparked the idea to develop a solution that `streamlines these calculations`, saving time and reducing the burden for business owners like him with just one simple click.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
+# Results
+1. Example Image of a Seller
+![pic1](<Group 1.png>)
+2. the website `before` Process
+![before process](image.png)
+3. the website `During` Process
+![During ](image-1.png)
+4. Result `Sum`
+![result](image-2.png)
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
