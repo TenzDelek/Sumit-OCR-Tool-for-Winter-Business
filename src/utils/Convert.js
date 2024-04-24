@@ -11,8 +11,10 @@ const converter = async (img) => {
 
         const numbersOnly = text.match(/\d+/g);
         if (numbersOnly) {
-            console.log(numbersOnly)
-            return numbersOnly.map(Number);
+            const numbers = numbersOnly.map(Number);
+            const filteredNumbers = numbers.filter(num => num >= 100);
+            console.log(filteredNumbers);
+            return filteredNumbers;
         } else {
             return [];
         }

@@ -11,6 +11,7 @@ export default function Home() {
   const imageInputRef = useRef(null);
   const [sum, setSum] = useState(0);
   const [amount, setamount] = useState([]);
+  
   console.log(typeof amount);
   const copytoclipboard = (txt) => {
     setCopyStatus("Copied");
@@ -40,30 +41,36 @@ export default function Home() {
     const total = amount.reduce((acc, curr) => acc + curr, 0);
     setSum(total);
   }, [amount]);
-// a note from tenzin, if you are reading this, i guess u want to know more about the
-//projects. read the below comment and hope you enjoy it
-//didnt made specific component for each. every code are in one page except for the
-//loop of the amount. hope many get inspire to make such projects
+  // a note from tenzin, if you are reading this, i guess u want to know more about the
+  //projects. read the below comment and hope you enjoy it
+  //didnt made specific component for each. every code are in one page except for the
+  //loop of the amount. hope many get inspire to make such projects
   return (
     <div className="mt-5">
       <p className=" leading-8  text-[#999999] text-sm">
-        <span className=" text-white bg-[#393939] font-bold text-2xl  p-2 rounded-md">SumIT</span> : An OCR
-        based tool for Tibetan Winter Business Sellers
+        <span className=" text-white bg-[#393939] font-bold text-2xl  p-2 rounded-md">
+          SumIT
+        </span>{" "}
+        : An OCR based tool for Tibetan Winter Business Sellers
       </p>
       <p className=" text-lg mt-4 font-bold">Inspiration:</p>
       <p className="mt-4 font-medium md:text-base  md:leading-7 leading-7 text-sm">
         This tool is designed specifically for
-        <span className=" mx-2 text-xs font-semibold bg-[#393939] transition hover:bg-[#292929] p-2 rounded-md">Tibetan</span>
-          Winter Business Sellers,
-        aiming to alleviate the cumbersome process of manual calculations from
-        their books. The inspiration for this tool struck me when I witnessed my
-        father spending countless hours grappling with the complexities of
-        calculating{" "}
-        <span className=" mr-2 text-xs font-semibold bg-[#393939] transition hover:bg-[#292929] p-2 rounded-md"> Bhulon and Mar Tsa</span>
-       , often under considerable stress. Seeing his struggle
-        sparked the idea to develop a solution that streamlines these
-        calculations, saving time and reducing the burden for business owners
-        like him with just one simple click.
+        <span className=" mx-2 text-xs font-semibold bg-[#393939] transition hover:bg-[#292929] p-2 rounded-md">
+          Tibetan
+        </span>
+        Winter Business Sellers, aiming to alleviate the cumbersome process of
+        manual calculations from their books. The inspiration for this tool
+        struck me when I witnessed my father spending countless hours grappling
+        with the complexities of calculating{" "}
+        <span className=" mr-2 text-xs font-semibold bg-[#393939] transition hover:bg-[#292929] p-2 rounded-md">
+          {" "}
+          Bhulon and Mar Tsa
+        </span>
+        , often under considerable stress. Seeing his struggle sparked the idea
+        to develop a solution that streamlines these calculations, saving time
+        and reducing the burden for business owners like him with just one
+        simple click.
       </p>
       <div className=" mt-3">
         <p className=" text-lg font-bold">Steps:</p>
@@ -150,12 +157,22 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-wrap gap-2 mt-2">
-          {amount.map((item, index) => (
-            <div key={index} className="">
-              {" "}
-              <FinalList item={item} />
+          {amount.length === 0  ? (
+            <div className=" px-2">
+            <p  className=" text-sm ">The Picture scanned has no Number or the number is less than 100</p>
+            <p className=" text-md font-bold">Reason for less than 100</p>
+            <p className=" text-sm ">the less than 100 condition is applied as winter business atleast 
+              make more than this. one glove is 150 so it cant be true.
+            </p>
             </div>
-          ))}
+          ) : (
+            amount.map((item, index) => (
+              <div key={index}>
+                {" "}
+                <FinalList item={item} />
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
